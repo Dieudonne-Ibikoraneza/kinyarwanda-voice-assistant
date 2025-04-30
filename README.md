@@ -45,15 +45,14 @@ GPU (for TTS performance, optional)
 pip
 
 🔧 Setup Steps
-bash
-Copy
-Edit
+
 # Clone your version
-git clone https://github.com/YOUR_USERNAME/kinyarwanda-voice-companion.git
-cd kinyarwanda-voice-companion
+```bash
+git clone https://github.com/Dieudonne-Ibikoraneza/kinyarwanda-voice-companion.git```
+```cd kinyarwanda-voice-companion```
 
 # Install dependencies
-pip install -r requirements.txt
+```pip install -r requirements.txt```
 Ensure any model dependencies (STT or TTS) are downloaded or mounted via Google Drive.
 
 📸 Screenshots
