@@ -1,105 +1,106 @@
-# Kinya Voice Assistant 🎤
+# 🗣️ Kinyarwanda Voice Companion
 
-A sophisticated voice assistant that understands and responds in Kinyarwanda, providing a natural conversational interface through speech-to-text and text-to-speech capabilities.
-
-## 🌟 Features
-
-- **Voice Input Processing**: Captures and processes Kinyarwanda speech input
-- **Speech-to-Text (STT)**: Accurate transcription of Kinyarwanda speech using NeMo-based models
-- **Natural Language Processing**: Handles queries using both rule-based patterns and ChatGPT integration
-- **Text-to-Speech (TTS)**: High-quality Kinyarwanda speech synthesis using MB-iSTFT-VITS2
-- **Interactive Interface**: User-friendly Gradio web interface for easy interaction
-
-## 📝 Description
-
-Kinya Voice Assistant is an innovative project that creates a seamless voice interaction experience in Kinyarwanda. The system follows a three-step process:
-
-1. **Speech Recognition**: Converts spoken Kinyarwanda into text
-2. **Query Processing**: Analyzes the text and generates appropriate responses
-3. **Speech Synthesis**: Converts the response back into natural-sounding Kinyarwanda speech
-
-## 🖼️ Demo
-
-### Terminal Execution
-![Terminal Run](assets/terminal-run.png)
-
-### User Interface
-![UI Run](assets/ui-run.png)
-
-### Usage Example
-![Usage Demo](assets/usage.gif)
-
-## 🛠️ Technical Architecture
-
-### Speech-to-Text (STT)
-- Built using NVIDIA NeMo framework
-- Utilizes a pretrained Kinyarwanda model from [RW-DEEPSPEECH-API](https://github.com/agent87/RW-DEEPSPEECH-API/tree/main/stt)
-- Handles various audio inputs and converts them to text format
-
-### Natural Language Processing
-- Implements a hybrid approach:
-  - Rule-based pattern matching for common queries
-  - ChatGPT integration for handling complex queries
-  - Custom intent recognition system
-- Supports various conversation types (greetings, questions, general dialogue)
-
-### Text-to-Speech (TTS)
-- Based on [KinyaTTS](https://github.com/anzeyimana/KinyaTTS/tree/master/Inference)
-- Uses MB-iSTFT-VITS2 model architecture
-- Generates natural-sounding Kinyarwanda speech
-
-## 🔧 Setup and Installation
-
-### Prerequisites
-- Python 3.x
-- NVIDIA GPU (recommended for optimal performance)
-- Google Colab (for running the notebook)
-
-### Required Packages
-```bash
-pip install -e /path/to/Inference/  # KinyaTTS
-pip install "numpy<2.1.0,>1.26.0"
-pip install Cython
-pip install gradio
-pip install openai  # For ChatGPT integration
-```
-
-## 🚀 Usage
-
-1. Open the notebook in Google Colab
-2. Mount your Google Drive containing the model files
-3. Run all cells to set up the environment
-4. Use the Gradio interface to interact with the assistant
-
-## ⚠️ Known Challenges
-
-1. **Audio Quality Sensitivity**
-   - Best performance in quiet environments
-   - May have reduced accuracy with background noise
-
-2. **Language Detection**
-   - Occasional confusion with similar languages (e.g., Kiswahili)
-   - Sample case: "niyume" was detected as Kiswahili
-
-3. **Sampling Rate Issues**
-   - Initial challenges with the benax-rw/kinyawishper model
-   - Resolved by implementing alternative solutions
-
-## 🗃️ Resources
-
-- Full source code and TTS model: [Google Drive Link](https://drive.google.com/drive/folders/1X6mPLWlz0KGq9IRMAutqmbWb-pZBtSXC?usp=drive_link)
-- Project notebook: `kin_assistant.ipynb`
-
-## 👏 Credits
-
-- **Development Platform**: [Google Colab](https://colab.research.google.com/)
-- **STT Model**: [RW-DEEPSPEECH-API](https://github.com/agent87/RW-DEEPSPEECH-API/tree/main/stt)
-- **TTS Implementation**: [KinyaTTS](https://github.com/anzeyimana/KinyaTTS) by Rwanda MIT researchers
-- **Language Model**: OpenAI's ChatGPT for advanced query processing
-
-## 📄 License
-
-This project is open-source and available under the MIT License.
+A lightweight, AI-powered voice assistant built specifically for Kinyarwanda speakers. This tool enables seamless voice interaction by converting spoken language into text, understanding the query, and responding with lifelike speech.
 
 ---
-Created with ❤️ for Rwanda's technological advancement
+
+## 🚀 What This Project Does
+
+This assistant is designed to support **end-to-end voice communication** in Kinyarwanda. The system enables you to:
+
+- 🎙️ Speak naturally in Kinyarwanda
+- 🧠 Get meaningful responses via AI or rule-based logic
+- 🔊 Hear back clear Kinyarwanda speech in real-time
+
+Whether you're building a localized chatbot, learning language tech, or experimenting with voice AI, this project serves as a flexible foundation.
+
+---
+
+## ✨ Key Capabilities
+
+| Feature              | Description                                                                 |
+|----------------------|-----------------------------------------------------------------------------|
+| 🎧 Voice Recognition | Translates Kinyarwanda speech into text using pre-trained acoustic models   |
+| 🤖 NLP Engine        | Understands the user's intent using hybrid logic (rule-based + GPT)         |
+| 🔈 Voice Synthesis   | Responds in fluent, natural Kinyarwanda using TTS technology                |
+| 🌐 Web Interface     | Launches an interactive UI powered by Gradio                                |
+| 💬 Custom Responses  | Supports intent-specific, predefined answers for faster interaction         |
+
+---
+
+## 🧠 How It Works
+
+graph TD
+A[🎙️ User Speaks] --> B[STT Engine - Transcribe Speech]
+B --> C[NLP Module - Understand Intent]
+C --> D[Response Generation - Rule or GPT]
+D --> E[TTS Engine - Synthesize Speech]
+E --> F[🔊 Audio Output]
+🛠 Installation Guide
+⚙️ Requirements
+Python 3.8 or later
+
+GPU (for TTS performance, optional)
+
+pip
+
+🔧 Setup Steps
+bash
+Copy
+Edit
+# Clone your version
+git clone https://github.com/YOUR_USERNAME/kinyarwanda-voice-companion.git
+cd kinyarwanda-voice-companion
+
+# Install dependencies
+pip install -r requirements.txt
+Ensure any model dependencies (STT or TTS) are downloaded or mounted via Google Drive.
+
+📸 Screenshots
+Replace or add your own screenshots under the assets/ folder.
+
+Gradio Web UI
+
+Terminal Interaction
+
+🧪 Running the Assistant
+Local Run
+bash
+Copy
+Edit
+python kin_assistant.py
+Google Colab
+Open kin_assistant.ipynb
+
+Mount your Google Drive with model files
+
+Run all cells and launch the interface
+
+🧰 Technology Stack
+STT: NeMo-based Kinyarwanda model
+
+TTS: MB-iSTFT-VITS2 via KinyaTTS
+
+NLP: Rule-based intent matcher + GPT fallback
+
+UI: Gradio for interactive experience
+
+❗ Known Issues
+Background noise can reduce recognition accuracy
+
+Occasionally confuses similar-sounding languages (e.g., Kiswahili)
+
+Large models may require Google Colab or GPU for smooth inference
+
+📁 Resources
+📓 Notebook: kin_assistant.ipynb
+
+🧠 TTS Model: KinyaTTS Inference
+
+🗣️ STT Model: RW-DEEPSPEECH-API
+
+🧑‍💻 Author
+This version is maintained and adapted by Dieudonne. Original ideas have been extended and restructured for educational and experimental purposes in the field of voice AI for African languages.
+
+📄 License
+This project is distributed under the MIT License. Feel free to modify, distribute, or build upon it.
